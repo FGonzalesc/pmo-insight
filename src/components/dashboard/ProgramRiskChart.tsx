@@ -5,10 +5,10 @@ import { Card } from "@/src/components/ui/Card";
 import type { RiesgoPorPrograma } from "@/src/types/portfolio";
 
 const riskSeries = [
-  { key: "enControl", label: "En control", color: "#7BCFA5" },
-  { key: "atencion", label: "Atencion", color: "#F2C86B" },
-  { key: "altoRiesgo", label: "Alto riesgo", color: "#E99A59" },
-  { key: "critico", label: "Critico", color: "#D96B75" },
+  { key: "enControl", label: "En control", color: "#8EDBCB" },
+  { key: "atencion", label: "Atencion", color: "#D9C179" },
+  { key: "altoRiesgo", label: "Alto riesgo", color: "#D6A16F" },
+  { key: "critico", label: "Critico", color: "#C96B7B" },
 ] as const;
 
 export function ProgramRiskChart({ data }: { data: RiesgoPorPrograma[] }) {
@@ -20,7 +20,7 @@ export function ProgramRiskChart({ data }: { data: RiesgoPorPrograma[] }) {
   return (
     <Card className="p-5">
       <div className="mb-4">
-        <p className="text-xs font-semibold text-sky-700">Estado presupuestal por programa</p>
+        <p className="text-xs font-semibold text-[#2F80ED]">Estado presupuestal por programa</p>
         <h2 className="text-base font-semibold tracking-normal text-slate-950">Proyectos por estado presupuestal</h2>
       </div>
       <div className="relative h-72 w-full">

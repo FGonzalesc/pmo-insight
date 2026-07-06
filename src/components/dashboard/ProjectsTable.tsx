@@ -25,7 +25,7 @@ export function ProjectsTable({ proyectos }: { proyectos: ProyectoCalculado[] })
     <Card className="overflow-hidden">
       <div className="flex flex-col gap-4 border-b border-slate-200/80 bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-sm font-semibold text-sky-700">Tabla de proyectos</p>
+          <p className="text-sm font-semibold text-[#2F80ED]">Tabla de proyectos</p>
           <h2 className="text-xl font-semibold tracking-normal text-slate-950">Detalle presupuestal de proyectos</h2>
         </div>
         <div className="text-sm font-medium text-slate-500">
@@ -59,7 +59,7 @@ export function ProjectsTable({ proyectos }: { proyectos: ProyectoCalculado[] })
           </thead>
           <tbody className="divide-y divide-slate-100 bg-white">
             {visibleProjects.map((proyecto) => (
-              <tr key={proyecto.codigo} className="transition hover:bg-sky-50/40">
+              <tr key={proyecto.codigo} className="transition hover:bg-[#2F80ED]/[0.03]">
                 <td className="px-4 py-5 font-semibold text-slate-800">{proyecto.codigo}</td>
                 <td className="max-w-72 px-4 py-4">
                   <p className="font-medium text-slate-900">{proyecto.nombre}</p>
@@ -72,7 +72,7 @@ export function ProjectsTable({ proyectos }: { proyectos: ProyectoCalculado[] })
                 <td className="px-4 py-4 text-slate-700">{formatCurrency(proyecto.presupuestoAprobado)}</td>
                 <td className="px-4 py-4 text-slate-700">{formatCurrency(proyecto.ejecutadoAcumulado)}</td>
                 <td className="px-4 py-4 text-slate-700">{formatCurrency(proyecto.forecast)}</td>
-                <td className={`px-4 py-4 font-medium ${proyecto.variacion > 0 ? "text-rose-700" : "text-emerald-700"}`}>
+                <td className={`px-4 py-4 font-medium ${proyecto.variacion > 0 ? "text-slate-950" : "text-[#00C2A8]"}`}>
                   {formatCurrency(proyecto.variacion)}
                 </td>
                 <td className="px-4 py-4">

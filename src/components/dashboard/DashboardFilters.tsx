@@ -26,7 +26,7 @@ export function DashboardFilters({ filtros, setFiltros, proyectos }: DashboardFi
   ];
 
   return (
-    <section className="grid gap-3 border-b border-slate-200/80 bg-white/95 px-5 py-5 shadow-sm backdrop-blur sm:px-8 xl:grid-cols-[repeat(5,minmax(0,1fr))_1.5fr]">
+    <section className="grid gap-3 border-b border-slate-200/80 bg-white px-5 py-5 shadow-[0_8px_22px_rgba(15,23,42,0.035)] sm:px-8 xl:grid-cols-[repeat(5,minmax(0,1fr))_1.5fr]">
       <Field label="Programa">
         <Select
           value={filtros.programa}
@@ -83,7 +83,7 @@ export function DashboardFilters({ filtros, setFiltros, proyectos }: DashboardFi
       </Field>
       <Field label="Buscador">
         <div className="relative">
-          <Search className="pointer-events-none absolute left-3 top-3.5 h-4 w-4 text-slate-400" aria-hidden />
+          <Search className="pointer-events-none absolute left-3 top-3.5 h-4 w-4 text-[#2F80ED]" aria-hidden />
           <Input
             className="w-full pl-9"
             placeholder="Codigo, proyecto, sponsor"

@@ -51,7 +51,7 @@ export function Dashboard() {
   );
 
   return (
-    <div className="min-h-screen bg-[#f4f7fb] text-slate-950">
+    <div className="min-h-screen bg-white text-slate-950">
       <DashboardHeader mesCorte={filtros.mesCorte} />
       <DashboardFilters filtros={filtros} setFiltros={setFiltros} proyectos={proyectosCalculados} />
       <main className="mx-auto grid w-full max-w-[1600px] gap-6 px-5 py-7 sm:px-8">

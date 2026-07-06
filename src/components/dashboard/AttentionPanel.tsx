@@ -5,6 +5,7 @@ import { calcularProgramaMayorRiesgo } from "@/src/services/portfolio-service";
 import { formatCurrency } from "@/src/utils/currency";
 
 export function AttentionPanel({ proyectos }: { proyectos: ProyectoCalculado[] }) {
+  const brandGradient = "linear-gradient(90deg, #D63384, #2F80ED, #00C2A8)";
   const sinActualizar = proyectos.filter((proyecto) => !proyecto.actualizadoUltimoMesCerrado);
   const sobrePresupuesto = proyectos.filter((proyecto) => proyecto.forecast > proyecto.presupuestoAprobado);
   const consumoSuperior90 = proyectos.filter(
@@ -41,10 +42,11 @@ export function AttentionPanel({ proyectos }: { proyectos: ProyectoCalculado[] }
   ];
 
   return (
-    <Card className="overflow-hidden border-sky-100 bg-gradient-to-br from-sky-50 via-white to-indigo-50 p-6">
+    <Card className="relative overflow-hidden p-6">
+      <div className="absolute left-0 top-0 h-1 w-full" style={{ background: brandGradient }} />
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-2xl">
-          <span className="inline-flex rounded-full border border-sky-200 bg-white/80 px-3 py-1 text-xs font-semibold text-sky-700 shadow-sm">
+          <span className="inline-flex rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-[#2F80ED] shadow-sm">
             Atencion requerida
           </span>
           <h2 className="mt-4 text-2xl font-semibold tracking-normal text-slate-950">
@@ -59,10 +61,10 @@ export function AttentionPanel({ proyectos }: { proyectos: ProyectoCalculado[] }
             const Icon = alert.icon;
 
             return (
-              <div key={alert.label} className="rounded-xl border border-white/80 bg-white/80 p-4 shadow-sm backdrop-blur">
+              <div key={alert.label} className="rounded-xl border border-slate-200/80 bg-white p-4 shadow-sm">
                 <div className="flex items-start justify-between gap-3">
                   <p className="text-sm font-semibold leading-5 text-slate-600">{alert.label}</p>
-                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-sky-50 text-sky-700">
+                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white text-[#2F80ED]">
                     <Icon className="h-4 w-4" aria-hidden />
                   </span>
                 </div>

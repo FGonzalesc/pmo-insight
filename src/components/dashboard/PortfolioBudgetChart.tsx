@@ -25,7 +25,7 @@ export function PortfolioBudgetChart({ data }: { data: PresupuestoPorPrograma[] 
   return (
     <Card className="p-5">
       <div className="mb-5">
-        <p className="text-xs font-semibold text-sky-700">Grafico principal</p>
+        <p className="text-xs font-semibold text-[#2F80ED]">Grafico principal</p>
         <h2 className="text-base font-semibold tracking-normal text-slate-950">
           Presupuesto aprobado vs forecast por programa
         </h2>
@@ -34,12 +34,12 @@ export function PortfolioBudgetChart({ data }: { data: PresupuestoPorPrograma[] 
         <svg className="h-full w-full" viewBox="0 0 760 300" role="img" aria-label="Presupuesto aprobado vs forecast por programa">
           <defs>
             <linearGradient id="budgetGradient" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="#0F4C81" />
-              <stop offset="100%" stopColor="#123C69" />
+              <stop offset="0%" stopColor="#CBD5E1" />
+              <stop offset="100%" stopColor="#94A3B8" />
             </linearGradient>
             <linearGradient id="forecastGradient" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="#F5C15E" />
-              <stop offset="100%" stopColor="#E8A13A" />
+              <stop offset="0%" stopColor="#4DE0D0" />
+              <stop offset="100%" stopColor="#00C2A8" />
             </linearGradient>
           </defs>
           {[0, 0.25, 0.5, 0.75, 1].map((ratio) => {
@@ -91,9 +91,9 @@ export function PortfolioBudgetChart({ data }: { data: PresupuestoPorPrograma[] 
             );
           })}
           <g transform="translate(500 14)">
-            <rect width="10" height="10" rx="2" fill="#123C69" />
+            <rect width="10" height="10" rx="2" fill="#94A3B8" />
             <text x="16" y="10" className="fill-slate-500 text-[11px]">Presupuesto</text>
-            <rect x="104" width="10" height="10" rx="2" fill="#E8A13A" />
+            <rect x="104" width="10" height="10" rx="2" fill="#00C2A8" />
             <text x="120" y="10" className="fill-slate-500 text-[11px]">Forecast</text>
           </g>
         </svg>
@@ -110,7 +110,7 @@ export function PortfolioBudgetChart({ data }: { data: PresupuestoPorPrograma[] 
             <p className="mt-1 text-slate-950">Presupuesto: {formatCurrency(tooltip.presupuesto)}</p>
             <p className="text-slate-950">Ejecutado: {formatCurrency(tooltip.ejecutado)}</p>
             <p className="text-slate-950">Forecast: {formatCurrency(tooltip.forecast)}</p>
-            <p className={tooltip.desviacion > 0 ? "text-rose-700" : "text-emerald-700"}>
+            <p className={tooltip.desviacion > 0 ? "text-slate-950" : "text-[#00C2A8]"}>
               Desviacion: {formatCurrency(tooltip.desviacion)}
             </p>
           </div>

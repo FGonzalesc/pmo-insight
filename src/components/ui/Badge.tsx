@@ -1,10 +1,10 @@
 import type { NivelRiesgo } from "@/src/types/portfolio";
 
 const riskStyles: Record<NivelRiesgo, string> = {
-  EnControl: "border-emerald-200/70 bg-emerald-50 text-emerald-700 shadow-emerald-100",
-  Atencion: "border-amber-200/70 bg-amber-50 text-amber-700 shadow-amber-100",
-  AltoRiesgo: "border-orange-200/70 bg-orange-50 text-orange-700 shadow-orange-100",
-  Critico: "border-rose-200/70 bg-rose-50 text-rose-700 shadow-rose-100",
+  EnControl: "border-[#8EDBCB]/60 bg-[#F2FBF9] text-[#087B6D] shadow-slate-100",
+  Atencion: "border-[#D9C179]/60 bg-[#FCF8E9] text-[#836A15] shadow-slate-100",
+  AltoRiesgo: "border-[#D6A16F]/60 bg-[#FCF3EA] text-[#8A551E] shadow-slate-100",
+  Critico: "border-[#C96B7B]/60 bg-[#FCF0F2] text-[#933A49] shadow-slate-100",
 };
 
 export function RiskBadge({ nivel }: { nivel: NivelRiesgo }) {

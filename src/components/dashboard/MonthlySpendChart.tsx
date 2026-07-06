@@ -33,19 +33,19 @@ export function MonthlySpendChart({ data }: { data: GastoMensual[] }) {
   return (
     <Card className="p-5">
       <div className="mb-4">
-        <p className="text-sm font-semibold text-sky-700">Evolucion mensual del gasto</p>
+        <p className="text-sm font-semibold text-[#2F80ED]">Evolucion mensual del gasto</p>
         <h2 className="text-lg font-semibold tracking-normal text-slate-950">Movimiento CAPEX / OPEX</h2>
       </div>
       <div className="relative h-72 w-full">
         <svg className="h-full w-full" viewBox="0 0 620 260" role="img" aria-label="Movimiento mensual CAPEX y OPEX">
           <defs>
             <linearGradient id="capexLineFill" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="#123C69" stopOpacity="0.18" />
+              <stop offset="0%" stopColor="#123C69" stopOpacity="0.14" />
               <stop offset="100%" stopColor="#123C69" stopOpacity="0" />
             </linearGradient>
             <linearGradient id="opexLineFill" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="#57B6D6" stopOpacity="0.20" />
-              <stop offset="100%" stopColor="#57B6D6" stopOpacity="0" />
+              <stop offset="0%" stopColor="#7DB7F5" stopOpacity="0.20" />
+              <stop offset="100%" stopColor="#7DB7F5" stopOpacity="0" />
             </linearGradient>
           </defs>
           {[0, 0.5, 1].map((ratio) => {
@@ -62,7 +62,7 @@ export function MonthlySpendChart({ data }: { data: GastoMensual[] }) {
           <polygon points={`60,190 ${toPoints(capexPoints)} 580,190`} fill="url(#capexLineFill)" />
           <polygon points={`60,190 ${toPoints(opexPoints)} 580,190`} fill="url(#opexLineFill)" />
           <polyline points={toPoints(capexPoints)} fill="none" stroke="#123C69" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-          <polyline points={toPoints(opexPoints)} fill="none" stroke="#57B6D6" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+          <polyline points={toPoints(opexPoints)} fill="none" stroke="#7DB7F5" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
           {data.map((item, index) => {
             const x = 60 + (index / Math.max(data.length - 1, 1)) * 520;
             const y = 30 + 160 - (Math.max(item.capex, item.opex) / maxValue) * 160;
@@ -95,7 +95,7 @@ export function MonthlySpendChart({ data }: { data: GastoMensual[] }) {
             <text x="16" y="10" className="fill-slate-500 text-[11px]">
               CAPEX
             </text>
-            <rect x="82" width="10" height="10" rx="2" fill="#57B6D6" />
+            <rect x="82" width="10" height="10" rx="2" fill="#7DB7F5" />
             <text x="98" y="10" className="fill-slate-500 text-[11px]">
               OPEX
             </text>

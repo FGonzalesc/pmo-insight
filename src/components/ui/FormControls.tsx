@@ -17,7 +17,7 @@ export function Field({ label, children }: FieldProps) {
 export function Select({ className = "", children, ...props }: SelectHTMLAttributes<HTMLSelectElement>) {
   return (
     <select
-      className={`h-11 min-w-0 rounded-lg border border-slate-200/80 bg-slate-50/80 px-3 text-sm font-medium text-slate-800 shadow-inner outline-none transition hover:border-sky-200 hover:bg-white focus:border-sky-300 focus:bg-white focus:ring-4 focus:ring-sky-100 ${className}`}
+      className={`h-11 min-w-0 rounded-lg border border-slate-200/80 bg-white px-3 text-sm font-medium text-slate-800 shadow-sm outline-none transition hover:border-[#2F80ED]/40 focus:border-[#2F80ED] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 ${className}`}
       {...props}
     >
       {children}
@@ -28,7 +28,7 @@ export function Select({ className = "", children, ...props }: SelectHTMLAttribu
 export function Input({ className = "", ...props }: InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
-      className={`h-11 min-w-0 rounded-lg border border-slate-200/80 bg-slate-50/80 px-3 text-sm font-medium text-slate-800 shadow-inner outline-none transition placeholder:text-slate-400 hover:border-sky-200 hover:bg-white focus:border-sky-300 focus:bg-white focus:ring-4 focus:ring-sky-100 ${className}`}
+      className={`h-11 min-w-0 rounded-lg border border-slate-200/80 bg-white px-3 text-sm font-medium text-slate-800 shadow-sm outline-none transition placeholder:text-slate-400 hover:border-[#2F80ED]/40 focus:border-[#2F80ED] focus:bg-white focus:ring-4 focus:ring-[#2F80ED]/10 ${className}`}
       {...props}
     />
   );
